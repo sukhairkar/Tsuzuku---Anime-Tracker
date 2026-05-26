@@ -1,0 +1,122 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Output directory used by default by next
+.next
+out/
+
+# Output directory used by default by nuxt
+.nuxt
+
+# Gatsby files
+.cache/
+public/
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless Webpack templates/files
+.webpack/
+
+# Service tracking Webpack bundle analyzer outputs
+.serverless/
+
+# Parcel buffer directory
+.parcel-cache
+
+# Folder templates for VS Code
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Webpack Bundle Analyzer reports
+report.html
+
+# Cache utility
+.cache
+
+# MacOS file metadata
+.DS_Store
+
+# Vite / bundler outputs
+dist/
+dist-ssr/
+*.local
+
+# Environment files
+.env
+.env.production
+.env.development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Supabase
+supabase/.temp/
+supabase/.branches/
+supabase/.local/
+
+# React Native (Android)
+android/app/build/
+android/.gradle/
+android/local.properties
+android/key.mp4
+*.keystore
+*.apk
+*.aar
+*.aab
+
+# React Native (iOS)
+ios/Pods/
+ios/build/
+ios/DerivedData/
+ios/*.xcworkspace
+ios/*.xcodeproj/project.xcworkspace
+ios/*.xcodeproj/xcuserdata
+ios/*.xcworkspace/xcuserdata
+ios/Podfile.lock
+ios/Pods/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

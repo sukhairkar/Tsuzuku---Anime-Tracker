@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "lib": ["es2020"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "paths": {
+      "@tsuzuku/shared-types": ["../../packages/shared-types"],
+      "@tsuzuku/shared-api": ["../../packages/shared-api"]
+    }
+  },
+  "include": ["src/**/*", "App.tsx", "nativewind-env.d.ts"]
+}
