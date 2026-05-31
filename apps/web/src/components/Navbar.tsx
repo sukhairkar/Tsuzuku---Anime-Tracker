@@ -1,14 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Sun, Moon, Search, User as UserIcon, LogOut, Github } from 'lucide-react';
+import { Sun, Moon, Search, LogOut, Github } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext';
 import { getSupabase } from '@tsuzuku/shared-api';
 
-interface NavbarProps {
-  onSearchClick?: () => void;
-}
-
-export function Navbar({ onSearchClick }: NavbarProps) {
+export function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { user } = useAuth();
   const location = useLocation();

@@ -10,9 +10,10 @@ import {
   parseAnimeTitle,
   addTrack
 } from '@tsuzuku/shared-api';
-import type { AniListMedia, AnimeTrackEntry } from '@tsuzuku/shared-api';
+import type { AniListMedia } from '@tsuzuku/shared-api';
+import type { AnimeTrackEntry } from '@tsuzuku/shared-types';
 import { useTracks } from '../context/TracksContext';
-import { Sparkles, PlayCircle, Calendar, Plus, ChevronRight } from 'lucide-react';
+import { Sparkles, PlayCircle, Calendar, ChevronRight } from 'lucide-react';
 
 export default function BrowsePage() {
   const { tracks, addTrackToState } = useTracks();

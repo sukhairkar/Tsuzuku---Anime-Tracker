@@ -1,6 +1,5 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
 import { useTracks } from '../context/TracksContext';
 import type { AnimeTrackEntry } from '@tsuzuku/shared-types';
 import { AnimeCard } from '../components/AnimeCard';
@@ -9,10 +8,9 @@ import { Sparkles, BookOpen, Tag } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
 
 export default function DashboardPage() {
-  const { theme } = useTheme();
   const { tracks, liveData, updateTrackInState, removeTrackFromState, refreshTracks } = useTracks();
   const [searchParams, setSearchParams] = useSearchParams();
-  const selectedFilter = (searchParams.get('filter') as AnimeTrackEntry['status']) || 'ALL';
+  const selectedFilter = (searchParams.get('filter') as AnimeTrackEntry['status'] | 'ALL') || 'ALL';
   const selectedGenre = searchParams.get('genre') || '';
   const [notification, setNotification] = useState<string | null>(null);
 

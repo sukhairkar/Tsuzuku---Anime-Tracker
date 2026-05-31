@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 import type { AnimeTrackEntry } from '@tsuzuku/shared-types';
 import { fetchUserTracks, fetchLiveAnimeData } from '@tsuzuku/shared-api';
 import { useAuth } from './AuthContext';
@@ -37,7 +37,7 @@ export function TracksProvider({ children }: { children: ReactNode }) {
 
     setIsLoading(true);
     try {
-      const data = await fetchUserTracks(user.id);
+      const data = await fetchUserTracks();
       setTracks(data);
       
       const ids = data.map(t => t.anime_id);

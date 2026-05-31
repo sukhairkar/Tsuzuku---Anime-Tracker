@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 import { AnimeCard } from '../components/AnimeCard';
 import { CategoryDropdown } from '../components/CategoryDropdown';

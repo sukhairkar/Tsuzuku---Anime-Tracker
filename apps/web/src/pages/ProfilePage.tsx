@@ -1,13 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import { Navbar } from '../components/Navbar';
 import { useAuth } from '../context/AuthContext';
 import { getSupabase } from '@tsuzuku/shared-api';
-import { User, Settings, Save, Sparkles, Loader2, Image as ImageIcon, UploadCloud } from 'lucide-react';
+import { User, Settings, Save, Sparkles, Loader2, UploadCloud } from 'lucide-react';
 
 export default function ProfilePage() {
   const { user } = useAuth();
-  const navigate = useNavigate();
   const supabase = getSupabase();
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -70,7 +69,7 @@ export default function ProfilePage() {
         const fileName = `${user.id}-${Math.random()}.${fileExt}`;
         const filePath = `${fileName}`;
 
-        const { error: uploadError, data } = await supabase.storage
+        const { error: uploadError } = await supabase.storage
           .from('avatars')
           .upload(filePath, avatarFile, { upsert: true });
 
